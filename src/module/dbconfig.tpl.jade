@@ -1,0 +1,16 @@
+.content
+    .container
+        h3 DbConfig debug view
+        p
+            | Name:&nbsp;
+            input(type='text' ng-model='settings["name"].value' label='Name:')
+        p
+            | Value:
+        textarea.form-control(name='{{cfg}}',
+                              ng-model='cfg')
+        p
+        button(ng-click='loadConfig()')
+            | Reload
+        | &nbsp;
+        button(ng-click='saveConfig()')
+            | Save
