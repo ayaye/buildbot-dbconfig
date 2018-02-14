@@ -17,6 +17,8 @@ setup_www_plugin(
     description='Buildbot DbConfig plugin',
     author=u'Alexey Demakov',
     author_email=u'moris.aye.aye@gmail.com',
+    url='https://github.com/ayaye/buildbot-dbconfig'
+    long_description=open('README.rst', 'r').read(),
     packages=['dbconfig'],
     package_data={
         '': [
