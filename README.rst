@@ -1,4 +1,7 @@
-# buildbot-dbconfig
+=================
+buildbot-dbconfig
+=================
+
 Buildbot plugin that allows www-plugins to store settings in database.
 
 This plugin creates the endpoint 'dbconfig/api/config?name={cfg}'.
