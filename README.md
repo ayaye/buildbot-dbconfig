@@ -7,7 +7,7 @@ GET/PUT loads/stores configuration in buildbot database.
 
 Add 'dbconfig' to master.cfg:
 
-  c['www'] = dict(plugins=dict(dbconfig={'show_menu':False}...}
+        c['www'] = dict(plugins=dict(dbconfig={'show_menu':False}...}
 
 The 'show_menu' parameter controls visibility of DbConfig menu item (mostly used for debug).
 
@@ -18,7 +18,7 @@ Example controller code:
 
         $scope.loadConfig = () ->
             $http.get(dbConfigUrl+name).then (cfg) ->
-                $scope.cfg = JSON.stringify(cfg.data)
+                $scope.cfg = cfg.data
 
         $scope.saveConfig = () ->
             $http.put(dbConfigUrl+name,$scope.cfg)
