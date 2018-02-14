@@ -17,6 +17,7 @@ setup_www_plugin(
     description='Buildbot DbConfig plugin',
     author=u'Alexey Demakov',
     author_email=u'moris.aye.aye@gmail.com',
+    license='LGPLv3',
     url='https://github.com/ayaye/buildbot-dbconfig',
     long_description=open('README.rst', 'r').read(),
     packages=['dbconfig'],
@@ -32,5 +33,18 @@ setup_www_plugin(
     """,
     install_requires=[
           'klein',
+    ],
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
+        'Intended Audience :: Developers',
+        'Topic :: Software Development :: Build Tools',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
     ],
 )
