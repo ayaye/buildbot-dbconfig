@@ -1,7 +1,7 @@
 .python-version
 build/
 buildbot_dbconfig.egg-info/
-dbconfig/static/
+buildbot_dbconfig/static/
 dist/
 libs/
 node_modules/
