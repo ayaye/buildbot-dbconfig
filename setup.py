@@ -29,7 +29,7 @@ setup_www_plugin(
     },
     entry_points="""
         [buildbot.www]
-        buildbot_dbconfig = buildbot_dbconfig:ep
+        dbconfig = buildbot_dbconfig:ep
     """,
     install_requires=[
           'klein',

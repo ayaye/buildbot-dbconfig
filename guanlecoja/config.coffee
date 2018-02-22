@@ -9,7 +9,7 @@ module.exports =
     ### ###########################################################################################
     #   Name of the plugin
     ### ###########################################################################################
-    name: 'buildbot_dbconfig'
+    name: 'dbconfig'
     dir: build: 'buildbot_dbconfig/static'
     bower:
         testdeps:
