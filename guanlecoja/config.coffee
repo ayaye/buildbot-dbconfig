@@ -9,8 +9,8 @@ module.exports =
     ### ###########################################################################################
     #   Name of the plugin
     ### ###########################################################################################
-    name: 'dbconfig'
-    dir: build: 'dbconfig/static'
+    name: 'buildbot_dbconfig'
+    dir: build: 'buildbot_dbconfig/static'
     bower:
         testdeps:
             # vendors.js includes jquery, angularjs, etc in the right order
