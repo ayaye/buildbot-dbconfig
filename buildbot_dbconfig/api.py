@@ -31,14 +31,13 @@ class Api(object):
         request.setHeader('Content-Type', 'application/json')
         name = request.args.get(b'name',['_'])[0].decode('utf8')
         cfg = json.loads(request.content.read())
-        if cfg != self._cfg[name]:
+        if name not in self._cfg or cfg != self._cfg[name]:
             self._cfg[name] = cfg
             try:
                 err = yield self.saveCfg(name,cfg)
             except Exception as e:  # noqa
                 err = [repr(e)]
             if err is not None:
-                #yield self.saveCfg(name,self._cfg[name])
                 defer.returnValue(json.dumps({'success': False, 'errors': err}))
 
         yield defer.returnValue(json.dumps({'success': True}))
@@ -51,6 +50,9 @@ class Api(object):
     @defer.inlineCallbacks
     def loadCfg(self,name):
         oid = yield getDbConfigObjectId(self.ep.master)
-        cfg = yield self.ep.master.db.state.getState(oid, name)
-        defer.returnValue(cfg)
+        try:
+            cfg = yield self.ep.master.db.state.getState(oid, name)
+            defer.returnValue(cfg)
+        except Exception as e:
+            defer.returnValue(json.dumps({}))
        

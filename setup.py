@@ -20,7 +20,7 @@ setup_www_plugin(
     license='LGPLv3',
     url='https://github.com/ayaye/buildbot-dbconfig',
     long_description=open('README.rst', 'r').read(),
-    packages=['dbconfig'],
+    packages=['buildbot_dbconfig'],
     package_data={
         '': [
             'VERSION',
@@ -29,7 +29,7 @@ setup_www_plugin(
     },
     entry_points="""
         [buildbot.www]
-        dbconfig = dbconfig:ep
+        buildbot_dbconfig = buildbot_dbconfig:ep
     """,
     install_requires=[
           'klein',
